@@ -3,6 +3,24 @@
 const unsigned int mMaxLength = 696969;
 
 template <typename TypeKey, typename TypeValue>
+class CDataPairs
+{
+public:
+
+	TypeKey getTypeKey() { return keyPair; }
+	void setTypeKey(TypeKey key) { keyPair = key; }
+
+	TypeValue getTypeValue() { return valuePair; }
+	void setTypeValue(TypeValue value) { valuePair = value; }
+
+private:
+
+	TypeKey keyPair;
+	TypeValue valuePair;
+
+};
+
+template <typename TypeKey, typename TypeValue>
 class CMap
 {
 public:
@@ -10,25 +28,24 @@ public:
 	CMap::CMap() 
 	{
 		mLength = 0;
-		Key = new TypeKey[mMaxLength];
-		Value = new TypeValue[mMaxLength];
-		mStart = &Key[0];
+		Key = new CDataPairs<TypeKey,TypeValue>[mMaxLength];
+
 	}
 
-	void Clear();				//clears all elements 
+	void Clear();							//clears all elements 
 	void Insert(TypeKey, TypeValue);		//insert a new element 
-	void Erase(TypeKey, TypeValue);		//erase a specific element 
+	void Erase(TypeKey, TypeValue);			//erase a specific element 
 
-	bool Empty();		//returns a boolean for if the map is empty
-	unsigned int Size();				//returns the size of the array
-	unsigned int MaxSize();				//returns the max size the array can be 
+	bool Empty();							//returns a boolean for if the map is empty
+	unsigned int Size();					//returns the size of the array
+	unsigned int MaxSize();					//returns the max size the array can be 
 
-	int Count();					//return number of elements matching specific key. this is useless, 1 key to 1 value
-	TypeValue Find(TypeKey, TypeValue);			//looks up a certain element and returns where it is on the array
+	int Count();							//return number of elements matching specific key. this is useless, 1 key to 1 value
+	TypeValue Find(TypeKey, TypeValue);		//looks up a certain element and returns where it is on the array
 	void LookUp(TypeKey);
 
-	void Contains();			//looks up which elements contain whatever is passed through the function 
-	//pass over a typevalue, returns array of typekeys that contain original typevalue
+	void Contains();						//looks up which elements contain whatever is passed through the function 
+											//pass over a typevalue, returns array of typekeys that contain original typevalue
 
 	TypeValue get(TypeKey) {return TypeValue};
 
@@ -36,25 +53,24 @@ private:
 
 	unsigned int mLength;
 
-	int mCount;
 
-	TypeKey* Key;
-	TypeValue* Value;
+	CDataPairs<TypeKey, TypeValue>* Key;
 
-	TypeKey* mStart;
-	TypeKey* mEnd;
+	//TypeKey* mStart;
+	//TypeKey* mEnd;
 
 };
 
 template <typename TypeKey, typename TypeValue>
 void CMap<TypeKey, TypeValue>::Clear()
 {
+
 	//need iterator through the array to delete everything in it, return the length of the array to 0
-	for (int i = 0; i < mLength; i++)
-	{
+	//for (int i = 0; i < mLength; i++)
+	//{
 		//delete whats in the key array and the value array
 
-	}
+	//}
 	//set the length of the array to 0 as everything has been deleted
 	mLength = 0;
 }
@@ -63,8 +79,10 @@ template <typename TypeKey, typename TypeValue>
 void CMap<TypeKey, TypeValue>::Insert(TypeKey k, TypeValue v)
 {
 	//takes a key and a value, inserts key into key array and value into value array 
-	Key[mLength] = k;
-	Value[mLength] = v;
+	CDataPairs<TypeKey, TypeValue> newData;
+	newData.setTypeKey(k);
+	newData.setTypeValue(v);
+	Key[mLength] = newData;
 	mLength++;
 }
 
@@ -136,10 +154,10 @@ void CMap<TypeKey, TypeValue>::LookUp(TypeKey k)
 {
 	for (int i = 0; i < mLength; i++)
 	{
-		if (Key[i] == k)
+		if (Key->getTypeKey() == k)
 		{
-			cout << "the key is: " << Key[i] << endl;
-			cout << "the value is:" << Value[i] << endl;
+			cout << "the key is: " << Key->getTypeKey() << endl;
+			cout << "the value is:" << Key->getTypeValue() << endl;
 		}
 		else
 		{
@@ -147,4 +165,5 @@ void CMap<TypeKey, TypeValue>::LookUp(TypeKey k)
 		}
 
 	}
+
 }
