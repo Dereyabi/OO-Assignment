@@ -1,0 +1,18 @@
+﻿  Main.cpp
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(53,20): warning C4018:  '<': signed/unsigned mismatch
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(51): message :  while compiling class template member function 'void CMap<int,float>::Clear(void)'
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(48): message :  see reference to function template instantiation 'void CMap<int,float>::Clear(void)' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(12): message :  see reference to class template instantiation 'CMap<int,float>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(56,1): error C2541:  'delete': cannot delete objects that are not pointers
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(57,1): error C2541:  'delete': cannot delete objects that are not pointers
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(138,20): warning C4018:  '<': signed/unsigned mismatch
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(137): message :  while compiling class template member function 'void CMap<int,float>::LookUp(TypeKey)'
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(137): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(137): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(137): message :             TypeKey=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(137): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(44): message :  see reference to function template instantiation 'void CMap<int,float>::LookUp(TypeKey)' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(44): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(44): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(44): message :             TypeKey=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(44): message :         ]
