@@ -22,8 +22,12 @@ public:
 	{
 		mLength = 0;
 		keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
-
 	}
+
+	
+
+
+
 
 	void Clear();							//clears all elements 
 	void Insert(TypeKey, TypeValue);		//insert a new element 
@@ -44,13 +48,29 @@ public:
 
 private:
 
-	unsigned int mLength;
+	
 
+	template <typename TypeKey, typename TypeValue>
+	class iteratorClass
+	{
+	public:
+		bool operator ==(const iteratorClass& itPtr) const { return itPtr == itPtr.it; }
+		bool operator !=(const iteratorClass& itPtr) const { return itPtr != itPtr.it; }
+		iteratorClass<TypeKey, TypeValue>& operator ++() { it++; return *this; }
+		iteratorClass<TypeKey, TypeValue>& operator --() { it--; return *this; }
+		iteratorClass<TypeKey, TypeValue>* operator ->() { return *it }
+
+
+	private:
+		iteratorClass* it;
+	};
+
+	unsigned int mLength;
 
 	CDataPairs<TypeKey, TypeValue>* keyValueArray;
 
-	//TypeKey* mStart;
-	//TypeKey* mEnd;
+	iteratorClass<TypeKey, TypeValue>* mStart;
+	iteratorClass<TypeKey, TypeValue>* mEnd;
 
 };
 
@@ -61,7 +81,7 @@ void CMap<TypeKey, TypeValue>::Clear()
 	//need iterator through the array to delete everything in it, return the length of the array to 0
 	delete[] keyValueArray;
 
-	keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength];
+	keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
 	//set the length of the array to 0 as everything has been deleted
 	mLength = 0;
 }
@@ -73,6 +93,8 @@ void CMap<TypeKey, TypeValue>::Insert(TypeKey k, TypeValue v)
 	keyValueArray[mLength].keyPair = k;
 	keyValueArray[mLength].valuePair = v;
 	mLength++;
+	//this is trying to increment the pointer to the end of the array by 1
+	//mEnd++;
 }
 
 template <typename TypeKey, typename TypeValue>
@@ -94,52 +116,43 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 			break;
 		}
 	}
-
-	if (mLength == 1)
-	{
-		Clear();
-	}
-
-	for (unsigned int i = removeAtPoint; i < mLength - 1; i++)
-	{
-		keyValueArray[i] = keyValueArray[i + 1];
-	}
-
-	keyValueArray[mLength -1].keyPair = NULL;
-	keyValueArray[mLength -1].valuePair = NULL;
+	
+	//if (mLength == 1)
+	//{
+	//	Clear();
+	//}
+	//
+	//for (unsigned int i = removeAtPoint; i < mLength - 1; i++)
+	//{
+	//	keyValueArray[i] = keyValueArray[i + 1];
+	//}
+	//
+	//keyValueArray[mLength -1].keyPair = NULL;
+	//keyValueArray[mLength -1].valuePair = NULL;
 
 	//i spent too long on this to get rid of it, im actually an idiot tho
 	//takes a key, erase the key and the value, reduce length by 1
-	//for (int i = 0; i < mLength; i++)
-	//{
-	//	if (i != removeAtPoint)
-	//	{
-	//		//erase key and value associated with position, make length 1 less, move everything ahead to being 1 position less on the array
-	//		tempArray[i] = keyValueArray[i];
-	//		
-	//	}
-	//	else
-	//	{
-	//		tempArray[i].keyPair = NULL;
-	//		tempArray[i].valuePair = NULL;
-	//		//cout << "why is this: " << tempArray[i].keyPair << "   aaaahhhh  " << tempArray[i].valuePair << endl;
-	//		//tempArray[i] = keyValueArray[i];
-	//		
-	//	}
-	//}
+	for (int i = 0; i < mLength; i++)
+	{
+		if (i != removeAtPoint)
+		{
+			//erase key and value associated with position, make length 1 less, move everything ahead to being 1 position less on the array
+			tempArray[i] = keyValueArray[i];
+		}
+	}
+	delete[] keyValueArray;
 
-	//for (int i = 0; i < mLength; i++)
-	//{
-	//	if (tempArray[i].keyPair == 0)
-	//	{
-	//
-	//	}
-	//}
-	//
-	//for (int i = 0; i < mLength; i++)
-	//{
-	//	keyValueArray[i] = tempArray[i];
-	//}
+	keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
+
+	for (int i = 0; i < mLength; i++)
+	{
+		if (i != removeAtPoint)
+		{
+			keyValueArray[i] = tempArray[i];
+		}
+	}
+
+	insertionSort(keyValueArray, mLength);
 	mLength--;
 }
 
@@ -218,3 +231,28 @@ void CMap<TypeKey, TypeValue>::LookUp()
 	
 }
 
+
+
+template <typename TypeKey, typename TypeValue>
+void insertionSort(CDataPairs<TypeKey, TypeValue> arr[], int length)
+{
+	CDataPairs<TypeKey, TypeValue> key;
+	int i, j;
+	for (i = 1; i < length; i++)
+	{
+
+		key.keyPair = arr[i].keyPair;
+		key.valuePair = arr[i].valuePair;
+
+		j = i - 1;
+
+		while (j >= 0 && arr[j].keyPair > key.keyPair)
+		{
+
+			arr[j + 1] = arr[j];
+			j--;
+		}
+		arr[j + 1] = key;
+
+	}
+}

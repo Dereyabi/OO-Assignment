@@ -1,31 +1,5 @@
 ﻿  Main.cpp
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(88,20): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(80): message :  while compiling class template member function 'void CMap<int,float>::Erase(TypeKey)'
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(80): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(80): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(80): message :             TypeKey=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(80): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :  see reference to function template instantiation 'void CMap<int,float>::Erase(TypeKey)' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :             TypeKey=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(27,1): error C2059:  syntax error: '('
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(22): message :  while compiling class template member function 'CMap<int,float>::CMap(void)'
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(11): message :  see reference to function template instantiation 'CMap<int,float>::CMap(void)' being compiled
 D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(11): message :  see reference to class template instantiation 'CMap<int,float>' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(188,20): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(187): message :  while compiling class template member function 'TypeValue CMap<int,TypeValue>::Find(TypeKey)'
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(187): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(187): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(187): message :             TypeValue=float,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(187): message :             TypeKey=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(187): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(28): message :  see reference to function template instantiation 'TypeValue CMap<int,TypeValue>::Find(TypeKey)' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(28): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(28): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(28): message :             TypeValue=float,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(28): message :             TypeKey=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(28): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209,21): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(206): message :  while compiling class template member function 'void CMap<int,float>::LookUp(void)'
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(19): message :  see reference to function template instantiation 'void CMap<int,float>::LookUp(void)' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(196): warning C4715:  'CMap<int,float>::Find': not all control paths return a value
-  OO Assignment.vcxproj -> D:\Users\JStewart8\Desktop\OO-Assignment\Debug\OO Assignment.exe
