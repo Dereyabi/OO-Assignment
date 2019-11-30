@@ -24,13 +24,9 @@ public:
 		keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
 	}
 
-	
-
-
-
-
-	void Clear();							//clears all elements 
 	void Insert(TypeKey, TypeValue);		//insert a new element 
+	void OutputData();
+	void Clear();							//clears all elements 
 	void Erase(TypeKey);					//erase a specific element 
 
 	bool Empty();							//returns a boolean for if the map is empty
@@ -39,7 +35,7 @@ public:
 
 	int Count();							//return number of elements matching specific key. this is useless, 1 key to 1 value
 	TypeValue Find(TypeKey);				//looks up a certain element and returns where it is on the array
-	void LookUp();
+
 
 	void Contains();						//looks up which elements contain whatever is passed through the function 
 											//pass over a typevalue, returns array of typekeys that contain original typevalue
@@ -51,33 +47,31 @@ private:
 	
 
 	template <typename TypeKey, typename TypeValue>
-	class iteratorClass
+	struct iteratorStruct
 	{
 	public:
-		bool operator ==(const iteratorClass& itPtr) const { return itPtr == itPtr.it; }
-		bool operator !=(const iteratorClass& itPtr) const { return itPtr != itPtr.it; }
-		iteratorClass<TypeKey, TypeValue>& operator ++() { it++; return *this; }
-		iteratorClass<TypeKey, TypeValue>& operator --() { it--; return *this; }
-		iteratorClass<TypeKey, TypeValue>* operator ->() { return *it }
-
+		bool operator ==(const iteratorStruct& itPtr) const { return itPtr == itPtr.it; }
+		bool operator !=(const iteratorStruct& itPtr) const { return itPtr != itPtr.it; }
+		iteratorStruct<TypeKey, TypeValue>& operator ++() { it++; return *this; }
+		iteratorStruct<TypeKey, TypeValue>& operator --() { it--; return *this; }
+		iteratorStruct<TypeKey, TypeValue>* operator ->() { return *it }
 
 	private:
-		iteratorClass* it;
+		iteratorStruct* it;
 	};
 
 	unsigned int mLength;
 
 	CDataPairs<TypeKey, TypeValue>* keyValueArray;
 
-	iteratorClass<TypeKey, TypeValue>* mStart;
-	iteratorClass<TypeKey, TypeValue>* mEnd;
+	iteratorStruct<TypeKey, TypeValue>* mStart;
+	iteratorStruct<TypeKey, TypeValue>* mEnd;
 
 };
 
 template <typename TypeKey, typename TypeValue>
 void CMap<TypeKey, TypeValue>::Clear()
 {
-
 	//need iterator through the array to delete everything in it, return the length of the array to 0
 	delete[] keyValueArray;
 
@@ -94,7 +88,8 @@ void CMap<TypeKey, TypeValue>::Insert(TypeKey k, TypeValue v)
 	keyValueArray[mLength].valuePair = v;
 	mLength++;
 	//this is trying to increment the pointer to the end of the array by 1
-	//mEnd++;
+
+	mEnd++;
 }
 
 template <typename TypeKey, typename TypeValue>
@@ -107,6 +102,11 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 
 	CDataPairs<TypeKey, TypeValue> tempPair;
 
+	if (mLength == 1)
+	{
+		Clear();
+	}
+	//this should be an iterator
 	for (int i = 0; i < mLength; i++)
 	{
 		if (keyValueArray[i].keyPair == k)
@@ -117,11 +117,8 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 		}
 	}
 	
-	//if (mLength == 1)
-	//{
-	//	Clear();
-	//}
-	//
+	
+	
 	//for (unsigned int i = removeAtPoint; i < mLength - 1; i++)
 	//{
 	//	keyValueArray[i] = keyValueArray[i + 1];
@@ -132,6 +129,7 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 
 	//i spent too long on this to get rid of it, im actually an idiot tho
 	//takes a key, erase the key and the value, reduce length by 1
+	//this should be an iterator
 	for (int i = 0; i < mLength; i++)
 	{
 		if (i != removeAtPoint)
@@ -143,7 +141,7 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 	delete[] keyValueArray;
 
 	keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
-
+	//this should be an iterator
 	for (int i = 0; i < mLength; i++)
 	{
 		if (i != removeAtPoint)
@@ -152,7 +150,8 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 		}
 	}
 
-	insertionSort(keyValueArray, mLength);
+	//insertionSort(keyValueArray, mLength);
+	mEnd--;
 	mLength--;
 }
 
@@ -198,6 +197,7 @@ int CMap<TypeKey, TypeValue>::Count()
 template <typename TypeKey, typename TypeValue>
 TypeValue CMap<TypeKey, TypeValue>::Find(TypeKey k)
 {
+	//this should be an iterator
 	for (int i = 0; i < mLength; i++)
 	{
 		if (keyValueArray[i].keyPair == k)
@@ -215,10 +215,11 @@ void CMap<TypeKey, TypeValue>::Contains()
 }
 
 template <typename TypeKey, typename TypeValue>
-void CMap<TypeKey, TypeValue>::LookUp()
+void CMap<TypeKey, TypeValue>::OutputData()
 {
 	if (mLength != 0)
 	{
+		//this should be an iterator
 		for (int i = 0; i < mLength; i++)
 		{
 			cout << "the Key is:" << keyValueArray[i].keyPair << " the Value is:" << keyValueArray[i].valuePair << endl;
@@ -231,28 +232,62 @@ void CMap<TypeKey, TypeValue>::LookUp()
 	
 }
 
+//this is the proper sort
 
+//template <typename TypeKey, typename TypeValue>
+//void insertionSort(CDataPairs<TypeKey, TypeValue> arr[], int length)
+//{
+//	CDataPairs<TypeKey, TypeValue> key;
+//	int i, j;
+//	for (i = 1; i < length; i++)
+//	{
+//
+//		key.keyPair = arr[i].keyPair;
+//		key.valuePair = arr[i].valuePair;
+//
+//		j = i - 1;
+//
+//		while (j >= 0 && arr[j].keyPair > key.keyPair)
+//		{
+//			if (arr[i].keyPair == 0)
+//			{
+//				for (unsigned int j = i; j < mLength - 1; i++)
+//				{
+//					keyValueArray[i] = keyValueArray[i + 1];
+//				}
+//			}
+//
+//			arr[j + 1] = arr[j];
+//			j--;
+//
+//			for (unsigned int i = removeAtPoint; i < mLength - 1; i++)
+//			{
+//				keyValueArray[i] = keyValueArray[i + 1];
+//			}
+//
+//
+//		}
+//		arr[j + 1] = key;
+//
+//	}
+//}
 
-template <typename TypeKey, typename TypeValue>
-void insertionSort(CDataPairs<TypeKey, TypeValue> arr[], int length)
-{
-	CDataPairs<TypeKey, TypeValue> key;
-	int i, j;
-	for (i = 1; i < length; i++)
-	{
-
-		key.keyPair = arr[i].keyPair;
-		key.valuePair = arr[i].valuePair;
-
-		j = i - 1;
-
-		while (j >= 0 && arr[j].keyPair > key.keyPair)
-		{
-
-			arr[j + 1] = arr[j];
-			j--;
-		}
-		arr[j + 1] = key;
-
-	}
-}
+//void insertionSort(CDataPairs<TypeKey, TypeValue> arr[], int length)
+//{
+//	TypeKey tempKey;
+//	TypeValue tempValue;
+//
+//	int i, j, min;
+//
+//	for (i = 1; i < length; i++)
+//	{
+//		tempKey = arr[i].key
+//			j = i - 1;
+//		while (j >= 0 && arr[i].key > tempKey)
+//		{
+//			arr[j + 1] = arr[j];
+//			j = j - 1
+//		}
+//
+//	}
+//}
