@@ -1,7 +1,12 @@
 #pragma once
 #include <iostream>
+#include <iterator>
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
 
-const unsigned int mMaxLength = 696969;
+
+
 
 template <typename TypeKey, typename TypeValue>
 class CDataPairs
@@ -13,16 +18,69 @@ public:
 
 };
 
+
+
 template <typename TypeKey, typename TypeValue>
 class CMap
 {
+private:
+
+	unsigned int mMaxLength = 9;
+
+	template <typename TypeKey, typename TypeValue>
+	struct iteratorStruct
+	{
+	public: 
+		iteratorStruct() {}  //constructor for iterator class
+		~iteratorStruct() { it = NULL;  delete it; }
+		iteratorStruct(CDataPairs< typename TypeKey, typename TypeValue>* ptr) : it(ptr) {}	//allows iterator pointer to point towards
+		bool operator ==(const iteratorStruct<TypeKey, TypeValue>& itPtr) 
+		{ 
+			//overload == so user defined data can be compared
+			return it == itPtr.it; 
+		}	
+		bool operator !=(const iteratorStruct<TypeKey, TypeValue>& itPtr) 
+		{ 
+			return it != itPtr.it; 
+		}	
+		iteratorStruct<TypeKey, TypeValue>& operator ++() 
+		{ 
+			//overload to allow pointer arithmetic to cycle through array using pointer 
+			it++; 
+			index++;
+			return *this; 
+		}	
+		iteratorStruct<TypeKey, TypeValue>& operator --() 
+		{ 
+			//same but backwards
+			it--;
+			index--;
+			return *this; 
+		}	 
+		CDataPairs<TypeKey, TypeValue>* operator ->() 
+		{ 
+			return *it 
+		}	//allows access to keypair and value pair using pointer 
+
+		int index = 0;
+
+	private:
+		CDataPairs<TypeKey, TypeValue>* it;
+	};
+
+	unsigned int mLength;
+
 public:
 
-	CMap::CMap() 
+
+	CMap::CMap<typename TypeKey, typename TypeValue>()
 	{
 		mLength = 0;
+
 		keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
 	}
+
+	CMap::~CMap<typename TypeKey, typename TypeValue>() { delete[] keyValueArray; }
 
 	void Insert(TypeKey, TypeValue);		//insert a new element 
 	void OutputData();
@@ -30,8 +88,8 @@ public:
 	void Erase(TypeKey);					//erase a specific element 
 
 	bool Empty();							//returns a boolean for if the map is empty
-	unsigned int Size();					//returns the size of the array
-	unsigned int MaxSize();					//returns the max size the array can be 
+	int Size();					//returns the size of the array
+	int MaxSize();					//returns the max size the array can be 
 
 	int Count();							//return number of elements matching specific key. this is useless, 1 key to 1 value
 	TypeValue Find(TypeKey);				//looks up a certain element and returns where it is on the array
@@ -42,30 +100,13 @@ public:
 
 	TypeValue get(TypeKey) {return TypeValue};
 
-private:
-
+	using Iterator = iteratorStruct<TypeKey, TypeValue>;
+	iteratorStruct<TypeKey, TypeValue> mStart() { return &keyValueArray[0]; };
+	iteratorStruct<TypeKey, TypeValue> mEnd() { return &keyValueArray[mLength]; };
 	
-
-	template <typename TypeKey, typename TypeValue>
-	struct iteratorStruct
-	{
-	public:
-		bool operator ==(const iteratorStruct& itPtr) const { return itPtr == itPtr.it; }
-		bool operator !=(const iteratorStruct& itPtr) const { return itPtr != itPtr.it; }
-		iteratorStruct<TypeKey, TypeValue>& operator ++() { it++; return *this; }
-		iteratorStruct<TypeKey, TypeValue>& operator --() { it--; return *this; }
-		iteratorStruct<TypeKey, TypeValue>* operator ->() { return *it }
-
-	private:
-		iteratorStruct* it;
-	};
-
-	unsigned int mLength;
-
 	CDataPairs<TypeKey, TypeValue>* keyValueArray;
 
-	iteratorStruct<TypeKey, TypeValue>* mStart;
-	iteratorStruct<TypeKey, TypeValue>* mEnd;
+	
 
 };
 
@@ -83,13 +124,39 @@ void CMap<TypeKey, TypeValue>::Clear()
 template <typename TypeKey, typename TypeValue>
 void CMap<TypeKey, TypeValue>::Insert(TypeKey k, TypeValue v)
 {
+	CDataPairs<TypeKey, TypeValue>* tempArray;
+
+	if (mLength >= mMaxLength)
+	{
+		mMaxLength = mMaxLength * 2;
+
+		tempArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
+
+		CMap<TypeKey, TypeValue>::Iterator MyIterator;
+		for (int i = 0; i < mLength; i++)
+		{
+			tempArray[i] = keyValueArray[i];
+		}
+
+		delete[] keyValueArray;
+
+		keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
+
+		for (int i = 0; i < mLength; i++)
+		{
+			keyValueArray[i] = tempArray[i];
+		}
+
+		cout << "this is the max array length: " <<mMaxLength << endl;
+	}
+
 	//takes a key and a value, inserts key into key array and value into value array 
 	keyValueArray[mLength].keyPair = k;
 	keyValueArray[mLength].valuePair = v;
 	mLength++;
-	//this is trying to increment the pointer to the end of the array by 1
 
-	mEnd++;
+	tempArray = NULL;
+	delete tempArray;
 }
 
 template <typename TypeKey, typename TypeValue>
@@ -102,23 +169,26 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 
 	CDataPairs<TypeKey, TypeValue> tempPair;
 
-	if (mLength == 1)
-	{
-		Clear();
-	}
+	if (mLength == 1){Clear();}
 	//this should be an iterator
-	for (int i = 0; i < mLength; i++)
+	CMap<TypeKey, TypeValue>::Iterator MyIterator;
+	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 	{
-		if (keyValueArray[i].keyPair == k)
+		if (keyValueArray[MyIterator.index].keyPair == k)
 		{
-			removeAtPoint = i;
-			tempPair = keyValueArray[i];
+			removeAtPoint = MyIterator.index;
+			tempPair = keyValueArray[MyIterator.index];
 			break;
 		}
 	}
-	
-	
-	
+
+	//for (int i = 0; i < mLength; i++)
+	//{
+	//	
+	//}
+
+
+
 	//for (unsigned int i = removeAtPoint; i < mLength - 1; i++)
 	//{
 	//	keyValueArray[i] = keyValueArray[i + 1];
@@ -130,29 +200,32 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 	//i spent too long on this to get rid of it, im actually an idiot tho
 	//takes a key, erase the key and the value, reduce length by 1
 	//this should be an iterator
-	for (int i = 0; i < mLength; i++)
+	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 	{
-		if (i != removeAtPoint)
+		if (MyIterator.index != removeAtPoint)
 		{
 			//erase key and value associated with position, make length 1 less, move everything ahead to being 1 position less on the array
-			tempArray[i] = keyValueArray[i];
+			tempArray[MyIterator.index] = keyValueArray[MyIterator.index];
 		}
 	}
 	delete[] keyValueArray;
 
 	keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
 	//this should be an iterator
-	for (int i = 0; i < mLength; i++)
+	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 	{
-		if (i != removeAtPoint)
+		if (MyIterator.index != removeAtPoint)
 		{
-			keyValueArray[i] = tempArray[i];
+			keyValueArray[MyIterator.index] = tempArray[MyIterator.index];
 		}
 	}
 
 	//insertionSort(keyValueArray, mLength);
-	mEnd--;
+	//mEnd--;
 	mLength--;
+
+	tempArray = NULL;
+
 }
 
 template <typename TypeKey, typename TypeValue>
@@ -173,7 +246,7 @@ bool CMap<TypeKey, TypeValue>::Empty()
 }
 
 template <typename TypeKey, typename TypeValue>
-unsigned int CMap<TypeKey, TypeValue>::Size()
+int CMap<TypeKey, TypeValue>::Size()
 {
 	//just returns what the current length of the array is 
 	cout << "The length is: " << mLength << endl;
@@ -181,7 +254,7 @@ unsigned int CMap<TypeKey, TypeValue>::Size()
 }
 
 template <typename TypeKey, typename TypeValue>
-unsigned int CMap<TypeKey, TypeValue>::MaxSize()
+int CMap<TypeKey, TypeValue>::MaxSize()
 {
 	//just returns what the overall length of the array is
 	cout << "The max length is: " << mMaxLength << endl;
@@ -198,12 +271,13 @@ template <typename TypeKey, typename TypeValue>
 TypeValue CMap<TypeKey, TypeValue>::Find(TypeKey k)
 {
 	//this should be an iterator
-	for (int i = 0; i < mLength; i++)
+	CMap<TypeKey, TypeValue>::Iterator MyIterator;
+	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 	{
-		if (keyValueArray[i].keyPair == k)
+		if (keyValueArray[MyIterator.index].keyPair == k)
 		{
-			cout << "key is: " << keyValueArray[i].keyPair << "  value is: " << keyValueArray[i].valuePair << endl;
-			return keyValueArray[i].valuePair;
+			cout << "key is: " << keyValueArray[MyIterator.index].keyPair << "  value is: " << keyValueArray[MyIterator.index].valuePair << endl;
+			return keyValueArray[MyIterator.index].valuePair;
 		}
 	}
 }
@@ -229,7 +303,7 @@ void CMap<TypeKey, TypeValue>::OutputData()
 	{
 		cout << "nothing on the array" << endl;
 	}
-	
+
 }
 
 //this is the proper sort

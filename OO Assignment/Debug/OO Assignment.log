@@ -1,80 +1,518 @@
 ﻿  Main.cpp
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(223,21): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(219): message :  while compiling class template member function 'void CMap<TypeKey,TypeValue>::OutputData(void)'
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(219): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(219): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(219): message :             TypeKey=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(219): message :             TypeValue=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(219): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :  see reference to function template instantiation 'void CMap<TypeKey,TypeValue>::OutputData(void)' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :             TypeKey=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :             TypeValue=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(23): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(10): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(10): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(10): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(10): message :             TypeKey=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(10): message :             TypeValue=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(10): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(70): message :  see reference to function template instantiation 'void TestCases<int,int>(TypeKey [],TypeValue [])' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(70): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(70): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(70): message :             TypeKey=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(70): message :             TypeValue=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(70): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(110,20): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(97): message :  while compiling class template member function 'void CMap<TypeKey,TypeValue>::Erase(TypeKey)'
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(97): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(97): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(97): message :             TypeKey=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(97): message :             TypeValue=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(97): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(27): message :  see reference to function template instantiation 'void CMap<TypeKey,TypeValue>::Erase(TypeKey)' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(27): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(27): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(27): message :             TypeKey=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(27): message :             TypeValue=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(27): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(133,20): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(145,20): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(201,20): warning C4018:  '<': signed/unsigned mismatch
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(199): message :  while compiling class template member function 'TypeValue CMap<TypeKey,TypeValue>::Find(TypeKey)'
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(199): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(199): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(199): message :             TypeValue=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(199): message :             TypeKey=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(199): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(34): message :  see reference to function template instantiation 'TypeValue CMap<TypeKey,TypeValue>::Find(TypeKey)' being compiled
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(34): message :         with
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(34): message :         [
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(34): message :             TypeValue=int,
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(34): message :             TypeKey=int
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(34): message :         ]
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<int,int>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<int,float>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<int,double>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<int,char>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<int,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<float,int>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<float,float>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<float,char>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<float,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<float,double>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<double,float>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<double,int>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<double,double>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<double,char>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<double,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<char,int>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<char,float>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<char,char>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<char,double>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,int>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<char,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,float>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,double>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,char>::Find': not all control paths return a value
-D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(209): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(111): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :  see reference to function template instantiation 'void TestCases<int,int>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(122): message :  see reference to function template instantiation 'void TestCases<int,float>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(122): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(122): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(122): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(122): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(122): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(130): message :  see reference to function template instantiation 'void TestCases<int,double>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(130): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(130): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(130): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(130): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(130): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(138): message :  see reference to function template instantiation 'void TestCases<int,char>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(138): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(138): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(138): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(138): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(138): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(146): message :  see reference to function template instantiation 'void TestCases<int,std::string>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(146): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(146): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(146): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(146): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(146): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(165): message :  see reference to function template instantiation 'void TestCases<float,int>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(165): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(165): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(165): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(165): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(165): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(173): message :  see reference to function template instantiation 'void TestCases<float,float>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(173): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(173): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(173): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(173): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(173): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(181): message :  see reference to function template instantiation 'void TestCases<float,double>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(181): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(181): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(181): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(181): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(181): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(189): message :  see reference to function template instantiation 'void TestCases<float,char>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(189): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(189): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(189): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(189): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(189): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(197): message :  see reference to function template instantiation 'void TestCases<float,std::string>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(197): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(197): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(197): message :             TypeKey=float,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(197): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(197): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(207): message :  see reference to function template instantiation 'void TestCases<double,int>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(207): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(207): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(207): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(207): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(207): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(215): message :  see reference to function template instantiation 'void TestCases<double,float>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(215): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(215): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(215): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(215): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(215): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(223): message :  see reference to function template instantiation 'void TestCases<double,double>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(223): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(223): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(223): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(223): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(223): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(231): message :  see reference to function template instantiation 'void TestCases<double,char>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(231): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(231): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(231): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(231): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(231): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(239): message :  see reference to function template instantiation 'void TestCases<double,std::string>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(239): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(239): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(239): message :             TypeKey=double,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(239): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(239): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(249): message :  see reference to function template instantiation 'void TestCases<char,int>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(249): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(249): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(249): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(249): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(249): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(257): message :  see reference to function template instantiation 'void TestCases<char,float>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(257): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(257): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(257): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(257): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(257): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(265): message :  see reference to function template instantiation 'void TestCases<char,double>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(265): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(265): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(265): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(265): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(265): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(273): message :  see reference to function template instantiation 'void TestCases<char,char>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(273): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(273): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(273): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(273): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(273): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(281): message :  see reference to function template instantiation 'void TestCases<char,std::string>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(281): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(281): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(281): message :             TypeKey=char,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(281): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(281): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(290): message :  see reference to function template instantiation 'void TestCases<std::string,int>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(290): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(290): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(290): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(290): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(290): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(298): message :  see reference to function template instantiation 'void TestCases<std::string,float>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(298): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(298): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(298): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(298): message :             TypeValue=float
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(298): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(306): message :  see reference to function template instantiation 'void TestCases<std::string,double>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(306): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(306): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(306): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(306): message :             TypeValue=double
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(306): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(314): message :  see reference to function template instantiation 'void TestCases<std::string,char>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(314): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(314): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(314): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(314): message :             TypeValue=char
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(314): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:  obsolete declaration style: please use 'CMap<TypeKey,TypeValue>::CMap' instead
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(76,1): warning C4812:         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(322): message :  see reference to function template instantiation 'void TestCases<std::string,std::string>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(322): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(322): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(322): message :             TypeKey=std::string,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(322): message :             TypeValue=std::string
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(322): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(136,21): warning C4018:  '<': signed/unsigned mismatch
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(126): message :  while compiling class template member function 'void CMap<TypeKey,TypeValue>::Insert(TypeKey,TypeValue)'
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(126): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(126): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(126): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(126): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(126): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(39): message :  see reference to function template instantiation 'void CMap<TypeKey,TypeValue>::Insert(TypeKey,TypeValue)' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(39): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(39): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(39): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(39): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(39): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :  see reference to class template instantiation 'CMap<TypeKey,TypeValue>' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(33): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :  see reference to function template instantiation 'void TestCases<int,int>(TypeKey [],TypeValue [])' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(113): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(145,21): warning C4018:  '<': signed/unsigned mismatch
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(297,21): warning C4018:  '<': signed/unsigned mismatch
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(293): message :  while compiling class template member function 'void CMap<TypeKey,TypeValue>::OutputData(void)'
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(293): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(293): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(293): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(293): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(293): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(45): message :  see reference to function template instantiation 'void CMap<TypeKey,TypeValue>::OutputData(void)' being compiled
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(45): message :         with
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(45): message :         [
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(45): message :             TypeKey=int,
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(45): message :             TypeValue=int
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Main.cpp(45): message :         ]
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<int,int>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<int,double>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<int,float>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<int,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<int,char>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<float,int>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<float,double>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<float,float>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<float,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<float,char>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<double,int>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<double,float>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<double,char>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<double,double>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<double,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<char,int>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<char,float>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<char,char>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<char,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<char,double>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,int>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,float>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,double>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,char>::Find': not all control paths return a value
+D:\Users\JStewart8\Desktop\OO-Assignment\OO Assignment\Map.h(283): warning C4715:  'CMap<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Find': not all control paths return a value
   OO Assignment.vcxproj -> D:\Users\JStewart8\Desktop\OO-Assignment\Debug\OO Assignment.exe
