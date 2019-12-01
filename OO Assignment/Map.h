@@ -13,8 +13,8 @@ class CDataPairs
 {
 public:
 
-	TypeKey keyPair;
-	TypeValue valuePair;
+	TypeKey keyPair;		//stores key of any type
+	TypeValue valuePair;	//stores value of any type
 
 };
 
@@ -25,18 +25,18 @@ class CMap
 {
 private:
 
-	unsigned int mMaxLength = 9;
+	int mMaxLength = 9;		//sets the length of the array to this when initialised 
 
 	template <typename TypeKey, typename TypeValue>
 	struct iteratorStruct
 	{
 	public: 
 		iteratorStruct() {}  //constructor for iterator class
-		~iteratorStruct() { it = NULL;  delete it; }
-		iteratorStruct(CDataPairs< typename TypeKey, typename TypeValue>* ptr) : it(ptr) {}	//allows iterator pointer to point towards
+		~iteratorStruct() { it = NULL;  delete it; } //stops memory leaks with pointer to the data pairs
+		iteratorStruct(CDataPairs< typename TypeKey, typename TypeValue>* ptr) : it(ptr) {}	//allows iterator pointer to point towards data pairs
 		bool operator ==(const iteratorStruct<TypeKey, TypeValue>& itPtr) 
 		{ 
-			//overload == so user defined data can be compared
+			//overload == so user defined data can be compared, same with !=
 			return it == itPtr.it; 
 		}	
 		bool operator !=(const iteratorStruct<TypeKey, TypeValue>& itPtr) 
@@ -65,57 +65,45 @@ private:
 		int index = 0;
 
 	private:
-		CDataPairs<TypeKey, TypeValue>* it;
+		CDataPairs<TypeKey, TypeValue>* it; //pointer that cycles through the array
 	};
 
-	unsigned int mLength;
+	int mLength;	//the current length of the array
 
 public:
 
 
-	CMap::CMap<typename TypeKey, typename TypeValue>()
+	CMap<typename TypeKey, typename TypeValue>::CMap()
 	{
-		mLength = 0;
-
-		keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
+		mLength = 0;	
+		keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};	//initialises array and allocates array new memory
 	}
 
-	CMap::~CMap<typename TypeKey, typename TypeValue>() { delete[] keyValueArray; }
+	CMap<typename TypeKey, typename TypeValue>::~CMap() { delete[] keyValueArray; }
 
 	void Insert(TypeKey, TypeValue);		//insert a new element 
-	void OutputData();
+	void OutputData();						//outputs all data in the map
 	void Clear();							//clears all elements 
 	void Erase(TypeKey);					//erase a specific element 
 
 	bool Empty();							//returns a boolean for if the map is empty
-	int Size();					//returns the size of the array
-	int MaxSize();					//returns the max size the array can be 
+	int Size();								//returns the size of the array
+	int MaxSize();							//returns the max size the array can be 
 
-	int Count();							//return number of elements matching specific key. this is useless, 1 key to 1 value
-	TypeValue Find(TypeKey);				//looks up a certain element and returns where it is on the array
+	TypeValue Find(TypeKey);				//looks up a certain element and returns the key and the value 
 
-
-	void Contains();						//looks up which elements contain whatever is passed through the function 
-											//pass over a typevalue, returns array of typekeys that contain original typevalue
-
-	TypeValue get(TypeKey) {return TypeValue};
-
-	using Iterator = iteratorStruct<TypeKey, TypeValue>;
-	iteratorStruct<TypeKey, TypeValue> mStart() { return &keyValueArray[0]; };
-	iteratorStruct<TypeKey, TypeValue> mEnd() { return &keyValueArray[mLength]; };
+	using Iterator = iteratorStruct<TypeKey, TypeValue>;							
+	iteratorStruct<TypeKey, TypeValue> mStart() { return &keyValueArray[0]; };			//returns mStart as pointer to start of map array  
+	iteratorStruct<TypeKey, TypeValue> mEnd() { return &keyValueArray[mLength]; };		//returns mEnd as pointer to end of map array using mLength to find the end
 	
 	CDataPairs<TypeKey, TypeValue>* keyValueArray;
-
-	
-
 };
 
 template <typename TypeKey, typename TypeValue>
 void CMap<TypeKey, TypeValue>::Clear()
 {
-	//need iterator through the array to delete everything in it, return the length of the array to 0
+	//delete array becasue its quicker to make a new one than cycle through old array
 	delete[] keyValueArray;
-
 	keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
 	//set the length of the array to 0 as everything has been deleted
 	mLength = 0;
@@ -125,35 +113,49 @@ template <typename TypeKey, typename TypeValue>
 void CMap<TypeKey, TypeValue>::Insert(TypeKey k, TypeValue v)
 {
 	CDataPairs<TypeKey, TypeValue>* tempArray;
+	bool dupeKeyFound = false;	//if a duplicate key is found, output a message and stop the adding of data with dupe key
 
+	//makes the length of the array double what it was if the data goes over what the max length allows
+	//dynamic memory allocation 
 	if (mLength >= mMaxLength)
 	{
-		mMaxLength = mMaxLength * 2;
+		mMaxLength = mLength * 2;
 
+		//copies old array into a new array of the new size
 		tempArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
 
 		CMap<TypeKey, TypeValue>::Iterator MyIterator;
-		for (int i = 0; i < mLength; i++)
+		for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 		{
-			tempArray[i] = keyValueArray[i];
+			tempArray[MyIterator.index] = keyValueArray[MyIterator.index];
 		}
 
 		delete[] keyValueArray;
 
-		keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
+		keyValueArray = tempArray;
 
-		for (int i = 0; i < mLength; i++)
+		cout << "this is the new max array length: " <<mMaxLength << endl;
+	}
+
+	//checks whether a key is a duplicate of another key or not
+	CMap<TypeKey, TypeValue>::Iterator MyIterator;
+	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
+	{
+		if (keyValueArray[MyIterator.index].keyPair == k)
 		{
-			keyValueArray[i] = tempArray[i];
+			dupeKeyFound = true;
+			cout << "key is a duplicate, data not added" << endl;
 		}
-
-		cout << "this is the max array length: " <<mMaxLength << endl;
 	}
 
 	//takes a key and a value, inserts key into key array and value into value array 
-	keyValueArray[mLength].keyPair = k;
-	keyValueArray[mLength].valuePair = v;
-	mLength++;
+	//will only run if the key isnt a dupe 
+	if (!dupeKeyFound)
+	{
+		keyValueArray[mLength].keyPair = k;
+		keyValueArray[mLength].valuePair = v;
+		mLength++;
+	}
 
 	tempArray = NULL;
 	delete tempArray;
@@ -165,12 +167,13 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 
 	CDataPairs<TypeKey, TypeValue>* tempArray;
 	tempArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength];
-	int removeAtPoint;
+	int removeAtPoint;		//which index the data to remove is at 
 
 	CDataPairs<TypeKey, TypeValue> tempPair;
 
+	//just clears the array if there is only one value on it 
 	if (mLength == 1){Clear();}
-	//this should be an iterator
+	//finds the point to remove at and points at it
 	CMap<TypeKey, TypeValue>::Iterator MyIterator;
 	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 	{
@@ -182,57 +185,33 @@ void CMap<TypeKey, TypeValue>::Erase(TypeKey k)
 		}
 	}
 
-	//for (int i = 0; i < mLength; i++)
-	//{
-	//	
-	//}
-
-
-
-	//for (unsigned int i = removeAtPoint; i < mLength - 1; i++)
-	//{
-	//	keyValueArray[i] = keyValueArray[i + 1];
-	//}
-	//
-	//keyValueArray[mLength -1].keyPair = NULL;
-	//keyValueArray[mLength -1].valuePair = NULL;
-
-	//i spent too long on this to get rid of it, im actually an idiot tho
-	//takes a key, erase the key and the value, reduce length by 1
-	//this should be an iterator
-	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
+	//copies the array up until the point to remove at 
+	for(int i = 0; i < removeAtPoint; i++)
 	{
-		if (MyIterator.index != removeAtPoint)
-		{
-			//erase key and value associated with position, make length 1 less, move everything ahead to being 1 position less on the array
-			tempArray[MyIterator.index] = keyValueArray[MyIterator.index];
-		}
+		//erase key and value associated with position, make length 1 less, move everything ahead to being 1 position less on the array
+		tempArray[i] = keyValueArray[i];
 	}
+
+	//copies the rest of the array minus the data to remove to the temp array
+	for (int i = removeAtPoint + 1; i < mLength; i++)
+	{
+		tempArray[i - 1] = keyValueArray[i];
+	}
+
 	delete[] keyValueArray;
 
-	keyValueArray = new CDataPairs<TypeKey, TypeValue>[mMaxLength] {};
-	//this should be an iterator
-	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
-	{
-		if (MyIterator.index != removeAtPoint)
-		{
-			keyValueArray[MyIterator.index] = tempArray[MyIterator.index];
-		}
-	}
-
-	//insertionSort(keyValueArray, mLength);
-	//mEnd--;
+	//copies the temp array into the main array again then make the length 1 lower 
+	keyValueArray = tempArray;
 	mLength--;
 
 	tempArray = NULL;
-
+	delete tempArray;
 }
 
 template <typename TypeKey, typename TypeValue>
 bool CMap<TypeKey, TypeValue>::Empty()
 {
 	//checks if the map is empty or not
-
 	if (mLength == 0)
 	{
 		cout << "map is empty" << endl;
@@ -262,15 +241,9 @@ int CMap<TypeKey, TypeValue>::MaxSize()
 }
 
 template <typename TypeKey, typename TypeValue>
-int CMap<TypeKey, TypeValue>::Count()
-{
-	//useless lul
-}
-
-template <typename TypeKey, typename TypeValue>
 TypeValue CMap<TypeKey, TypeValue>::Find(TypeKey k)
 {
-	//this should be an iterator
+	//cycles through the array using pointers then outputs what the kay and the associated value is when it matches the key input
 	CMap<TypeKey, TypeValue>::Iterator MyIterator;
 	for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 	{
@@ -280,23 +253,19 @@ TypeValue CMap<TypeKey, TypeValue>::Find(TypeKey k)
 			return keyValueArray[MyIterator.index].valuePair;
 		}
 	}
-}
-
-template <typename TypeKey, typename TypeValue>
-void CMap<TypeKey, TypeValue>::Contains()
-{
-
+	return 0;
 }
 
 template <typename TypeKey, typename TypeValue>
 void CMap<TypeKey, TypeValue>::OutputData()
 {
+	//cycles through iterator and outputs every key and the value unless there is nothing on the array
 	if (mLength != 0)
 	{
-		//this should be an iterator
-		for (int i = 0; i < mLength; i++)
+		CMap<TypeKey, TypeValue>::Iterator MyIterator;
+		for (MyIterator = mStart(); MyIterator != mEnd(); ++MyIterator)
 		{
-			cout << "the Key is:" << keyValueArray[i].keyPair << " the Value is:" << keyValueArray[i].valuePair << endl;
+			cout << "the Key is:" << keyValueArray[MyIterator.index].keyPair << " the Value is:" << keyValueArray[MyIterator.index].valuePair << endl;
 		}
 	}
 	else
@@ -305,63 +274,3 @@ void CMap<TypeKey, TypeValue>::OutputData()
 	}
 
 }
-
-//this is the proper sort
-
-//template <typename TypeKey, typename TypeValue>
-//void insertionSort(CDataPairs<TypeKey, TypeValue> arr[], int length)
-//{
-//	CDataPairs<TypeKey, TypeValue> key;
-//	int i, j;
-//	for (i = 1; i < length; i++)
-//	{
-//
-//		key.keyPair = arr[i].keyPair;
-//		key.valuePair = arr[i].valuePair;
-//
-//		j = i - 1;
-//
-//		while (j >= 0 && arr[j].keyPair > key.keyPair)
-//		{
-//			if (arr[i].keyPair == 0)
-//			{
-//				for (unsigned int j = i; j < mLength - 1; i++)
-//				{
-//					keyValueArray[i] = keyValueArray[i + 1];
-//				}
-//			}
-//
-//			arr[j + 1] = arr[j];
-//			j--;
-//
-//			for (unsigned int i = removeAtPoint; i < mLength - 1; i++)
-//			{
-//				keyValueArray[i] = keyValueArray[i + 1];
-//			}
-//
-//
-//		}
-//		arr[j + 1] = key;
-//
-//	}
-//}
-
-//void insertionSort(CDataPairs<TypeKey, TypeValue> arr[], int length)
-//{
-//	TypeKey tempKey;
-//	TypeValue tempValue;
-//
-//	int i, j, min;
-//
-//	for (i = 1; i < length; i++)
-//	{
-//		tempKey = arr[i].key
-//			j = i - 1;
-//		while (j >= 0 && arr[i].key > tempKey)
-//		{
-//			arr[j + 1] = arr[j];
-//			j = j - 1
-//		}
-//
-//	}
-//}
